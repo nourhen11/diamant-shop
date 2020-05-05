@@ -1,0 +1,20 @@
+{
+  "name": "eshop",
+  "version": "1.0.0",
+  "description": "My incredible Nuxt.js project",
+  "author": "nourhen",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "bootstrap": "^4.1.3",
+    "bootstrap-vue": "^2.0.0",
+    "cosmicjs": "^3.2.41",
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {}
+}
