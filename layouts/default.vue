@@ -24,9 +24,9 @@
                   <li><a href="#"><span class="icon icon-person"></span></a></li>
                   <li><a href="#"><span class="icon icon-heart-o"></span></a></li>
                   <li>
-                    <a href="cart.html" class="site-cart">
+                    <a class="site-cart snipcart-checkout">
                       <span class="icon icon-shopping_cart"></span>
-                      <span class="count">2</span>
+                      <span class="count snipcart-items-count"></span>
                     </a>
                   </li> 
                   <li class="d-inline-block d-md-none ml-md-0"><a href="#" class="site-menu-toggle js-menu-toggle"><span class="icon-menu"></span></a></li>
@@ -41,7 +41,7 @@
         <div class="container">
           <ul class="site-menu js-clone-nav d-none d-md-block">
             <li class="has-children active"> <a href="index.html">Home</a></li>
-             <li><a href="shop.html">Bijoux</a></li>
+             <li><router-link to="/products">Catalogue</router-link>
             <li><a href="#">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
@@ -89,6 +89,14 @@
         </div>
       </div>
     </footer>
+<div hidden id="snipcart" data-api-key="M2IzMjUzM2EtNzQwYy00MjYxLWFlNWMtMTk0NWFjY2NmOTBjNjM3MjUwOTU2MDgyOTc2NjUx
+"></div>
+<script src="https://cdn.snipcart.com/themes/v3.0.13/default/snipcart.js"></script>
+<script>
+    document.addEventListener('snipcart.ready', function() {
+        Snipcart.api.session.setLanguage('fr');
+    });
+</script>
   </div>
 
 </template>

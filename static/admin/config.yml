@@ -35,5 +35,5 @@ collections:
       - { label: 'Color', name: 'color', widget: 'string' }
       - { label: 'Size', name: 'size', widget: 'string' }
       - { label: 'Image', name: 'image', widget: 'image' }
-      - { label: 'Category',name: 'category', widget: 'select', options: ["BAGUES", "BOUCLES A OREILLES", "BRACELETS","COLLIERS","BOX SET"]}
+      - { label: 'Category',name: 'category', widget: 'select', options: ["BAGUES", "BOUCLES A OREILLES", "BRACELETS","c","BOX SET"]}
             
