@@ -29,7 +29,6 @@ export default {
     '@/assets/fonts/icomoon/style.css',
     '@/assets/css/owl.theme.default.min.css',
     '@/assets/css/magnific-popup.css',
-    '@assets/css/owl.theme.default.min.css'
 
   ],
   /*

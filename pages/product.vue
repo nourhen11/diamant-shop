@@ -12,7 +12,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            <img :src="product.image" alt="Image" class="img-fluid">
+            <img :src="product.image" alt="Image" class="img-fluid" style="height: 94%; width: 86%;">
           </div>
           <div class="col-md-6">
             <h2 class="text-black">{{product.title}}</h2>
@@ -41,7 +41,7 @@
 
             </div>
 
-           <button class="snipcart-add-item"
+           <button class="snipcart-add-item "
             :data-item-id="product.title"
             :data-item-price="product.price"
             :data-item-image="product.image"

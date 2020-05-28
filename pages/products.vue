@@ -48,13 +48,12 @@
               <!-- -->
               <div class="col-sm-6 col-lg-4 mb-4" v-for="product in products" :key="product.title">
                 <div class="block-4 text-center border">
-                  <figure class="block-4-image">
+                  <figure class="block-4-image" style="height: 182px; cursor:pointer">
                     <a @click="addproduct(product)"><img :src="product.image" alt="Image placeholder" class="img-fluid"></a>
                   </figure>
                   <div class="block-4-text p-4">
-                    <h3><a href="shop-single.html">{{product.title}}</a></h3>
-                    <p class="mb-0">{{product.category}}</p>
-                    <p class="text-primary font-weight-bold">{{product.price}} $</p>
+                    <p class="mb-0" style="height: 54px;">{{product.title}}</p>
+                    <p class="font-weight-bold" style="color:#7971ea;">{{product.price}} € </p>
                   </div>
                 </div>
               </div>
@@ -83,10 +82,10 @@
             <div class="border p-4 rounded mb-4">
               <h3 class="mb-3 h6 text-uppercase text-black d-block">Categories</h3>
               <ul class="list-unstyled mb-0">
-                <li class="mb-1"><a href="#" class="d-flex"><span>BAGUES</span> <span class="text-black ml-auto">(2,220)</span></a></li>
-                <li class="mb-1"><a href="#" class="d-flex"><span>BRACELETS</span> <span class="text-black ml-auto">(2,124)</span></a></li>
-                <li class="mb-1"><a href="#" class="d-flex"><span>COLLIERS</span> <span class="text-black ml-auto">(2,124)</span></a></li>
-                <li class="mb-1"><a href="#" class="d-flex"><span>BOUCLES OREILLES</span> <span class="text-black ml-auto">(2,550)</span></a></li>
+                <li class="mb-1" ><a @click="filterByCategorie('BAGUES')" class="d-flex" style="cursor:pointer"><span>BAGUES</span> <span class="text-black ml-auto">(2,220)</span></a></li>
+                <li class="mb-1"><a  @click="filterByCategorie('BRACELETS')" class="d-flex" style="cursor:pointer"><span>BRACELETS</span> <span class="text-black ml-auto">(2,124)</span></a></li>
+                <li class="mb-1"><a @click="filterByCategorie('COLLIERS')" class="d-flex" style="cursor:pointer"><span>COLLIERS</span> <span class="text-black ml-auto">(2,124)</span></a></li>
+                <li class="mb-1"><a  @click="filterByCategorie('BOUCLES A OREILLES')" class="d-flex" style="cursor:pointer"><span>BOUCLES OREILLES</span> <span class="text-black ml-auto">(2,550)</span></a></li>
 
               </ul>
             </div>
@@ -113,7 +112,7 @@
 
               <div class="mb-4">
                 <h3 class="mb-3 h6 text-uppercase text-black d-block">Couleur</h3>
-                <a href="#" class="d-flex color-item align-items-center" >
+                <a class="d-flex color-item align-items-center" >
                   <span class="bg-danger color d-inline-block rounded-circle mr-2"></span> <span class="text-black">Blanc (2,429)</span>
                 </a>
                 <a href="#" class="d-flex color-item align-items-center" >
@@ -150,6 +149,23 @@ computed: {
       this.$store.commit('setProduct', item)
       this.$router.push('/product')
     }
+    ,
+    filterByCategorie(type){
+      let productFilters=[]
+      let files =  require.context('~/assets/content/product/', false, /\.json$/);
+      let productsList = files.keys().map(key => {
+        let res = files(key);
+        return res;
+      });
+      productsList.forEach(element => {
+       if(element.category==type){
+         productFilters.push(element)
+       }
+      })
+      this.$store.commit('setProducts',productFilters)
+
+    }
+    
   }
 };
 </script>

@@ -1,4 +1,8 @@
 <template>
+<div>
+
+<div hidden id="snipcart" data-api-key="M2IzMjUzM2EtNzQwYy00MjYxLWFlNWMtMTk0NWFjY2NmOTBjNjM3MjUwOTU2MDgyOTc2NjUx">
+</div>
  <div class="site-wrap">
     <header class="site-navbar" role="banner">
       <div class="site-navbar-top">
@@ -40,10 +44,10 @@
       <nav class="site-navigation text-right text-md-center" role="navigation">
         <div class="container">
           <ul class="site-menu js-clone-nav d-none d-md-block">
-            <li class="has-children active"> <a href="index.html">Home</a></li>
+            <li class="has-children active"> <router-link to="/">Home</router-link></li>
              <li><router-link to="/products">Catalogue</router-link>
-            <li><a href="#">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><router-link to="/blog">Blog</router-link></li>
+            <li><router-link to="/contact">Contact</router-link></li>
           </ul>
         </div>
       </nav>
@@ -89,14 +93,13 @@
         </div>
       </div>
     </footer>
-<div hidden id="snipcart" data-api-key="M2IzMjUzM2EtNzQwYy00MjYxLWFlNWMtMTk0NWFjY2NmOTBjNjM3MjUwOTU2MDgyOTc2NjUx
-"></div>
-<script src="https://cdn.snipcart.com/themes/v3.0.13/default/snipcart.js"></script>
+
+
+  </div>
+  <script src="https://cdn.snipcart.com/themes/v3.0.13/default/snipcart.js"></script>
 <script>
     document.addEventListener('snipcart.ready', function() {
         Snipcart.api.session.setLanguage('fr');
     });
 </script>
-  </div>
-
-</template>
+</div>
