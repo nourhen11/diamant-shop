@@ -82,10 +82,10 @@
             <div class="border p-4 rounded mb-4">
               <h3 class="mb-3 h6 text-uppercase text-black d-block">Categories</h3>
               <ul class="list-unstyled mb-0">
-                <li class="mb-1" ><a @click="filterByCategorie('BAGUES')" class="d-flex" style="cursor:pointer"><span>BAGUES</span> <span class="text-black ml-auto">(2,220)</span></a></li>
-                <li class="mb-1"><a  @click="filterByCategorie('BRACELETS')" class="d-flex" style="cursor:pointer"><span>BRACELETS</span> <span class="text-black ml-auto">(2,124)</span></a></li>
-                <li class="mb-1"><a @click="filterByCategorie('COLLIERS')" class="d-flex" style="cursor:pointer"><span>COLLIERS</span> <span class="text-black ml-auto">(2,124)</span></a></li>
-                <li class="mb-1"><a  @click="filterByCategorie('BOUCLES A OREILLES')" class="d-flex" style="cursor:pointer"><span>BOUCLES OREILLES</span> <span class="text-black ml-auto">(2,550)</span></a></li>
+                <li class="mb-1" ><a @click="filterProducts('category','BAGUES')" class="d-flex" style="cursor:pointer"><span>BAGUES</span> <span class="text-black ml-auto">(2,220)</span></a></li>
+                <li class="mb-1"><a  @click="filterProducts('category','BRACELETS')" class="d-flex" style="cursor:pointer"><span>BRACELETS</span> <span class="text-black ml-auto">(2,124)</span></a></li>
+                <li class="mb-1"><a @click="filterProducts('category','COLLIERS')" class="d-flex" style="cursor:pointer"><span>COLLIERS</span> <span class="text-black ml-auto">(2,124)</span></a></li>
+                <li class="mb-1"><a  @click="filterProducts('category','BOUCLES A OREILLES')" class="d-flex" style="cursor:pointer"><span>BOUCLES OREILLES</span> <span class="text-black ml-auto">(2,550)</span></a></li>
 
               </ul>
             </div>
@@ -150,18 +150,36 @@ computed: {
       this.$router.push('/product')
     }
     ,
-    filterByCategorie(type){
+    filterProducts(type,valeur){
       let productFilters=[]
       let files =  require.context('~/assets/content/product/', false, /\.json$/);
       let productsList = files.keys().map(key => {
         let res = files(key);
         return res;
       });
+
+      switch (type) {
+        case 'category':
+          console.log('category filter.');
+          break;
+        case 'color':
+           console.log('color filter.');
+        case 'size':
+          console.log('size filter.');
+          // expected output: "Mangoes and papayas are $2.79 a pound."
+          break;
+        default:
+          console.log(`Sorry, we are out of.`);
+      }
+
       productsList.forEach(element => {
-       if(element.category==type){
+       if(element.category==valeur){
          productFilters.push(element)
        }
       })
+
+
+
       this.$store.commit('setProducts',productFilters)
 
     }
