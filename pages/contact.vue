@@ -15,7 +15,7 @@
           </div>
           <div class="col-md-7">
 
-            <form  method="post" data-netlify="true">
+            <form  method="post" data-netlify="true" data-netlify-recaptcha="true">
               
               <div class="p-3 p-lg-5 border">
                 <div class="form-group row">
