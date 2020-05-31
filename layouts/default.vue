@@ -60,6 +60,16 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-6 mb-5 mb-lg-0">
+               <div class="block-7">
+                <form action="#" method="post">
+                  <h3 for="email_subscribe" class="footer-heading">RESTEZ INFORMÉS</h3>
+                  <p>Recevez toutes les dernières informations sur les événements, les ventes et les offres. Inscrivez-vous à la newsletter dès aujourd'hui.</p>
+                  <div class="form-group">
+                    <input type="text" class="form-control py-4" id="email_subscribe" placeholder="Email">
+                    <input type="submit" class="btn btn-sm btn-primary" value="Send" style="background-color:#7971ea">
+                  </div>
+                </form>
+              </div>
             
             </div>
             <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
@@ -69,21 +79,13 @@
               <div class="block-5 mb-5">
                 <h3 class="footer-heading mb-4">Contact Info</h3>
                 <ul class="list-unstyled">
-                  <li class="address"> paris</li>
+                  <li class="address"> 39 RUE DU ANATOLE 75012 PARIS</li>
                   <li class="phone"><a href="tel://23923929210">+2 392 3929 210</a></li>
                   <li class="email">emailaddress@domain.com</li>
                 </ul>
               </div>
 
-              <div class="block-7">
-                <form action="#" method="post">
-                  <label for="email_subscribe" class="footer-heading">Subscribe</label>
-                  <div class="form-group">
-                    <input type="text" class="form-control py-4" id="email_subscribe" placeholder="Email">
-                    <input type="submit" class="btn btn-sm btn-primary" value="Send">
-                  </div>
-                </form>
-              </div>
+             
             </div>
           </div>
           <div class="row pt-5 mt-5 text-center">
