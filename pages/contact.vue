@@ -15,7 +15,7 @@
           </div>
           <div class="col-md-7">
 
-            <form action="#" method="post">
+            <form  method="post" data-netlify="true">
               
               <div class="p-3 p-lg-5 border">
                 <div class="form-group row">
