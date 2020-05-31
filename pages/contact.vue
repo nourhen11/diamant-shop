@@ -15,7 +15,7 @@
           </div>
           <div class="col-md-7">
 
-            <form  method="post" data-netlify="true" data-netlify-recaptcha="true">
+            <form  name="landing-form" method="post" netlify>
               
               <div class="p-3 p-lg-5 border">
                 <div class="form-group row">
@@ -48,10 +48,7 @@
                   </div>
                 </div>
 
-                <div class="form-group row">
-                   <div data-netlify-recaptcha="true"></div>
-                </div>
-
+               
                 <div class="form-group row">
                   <div class="col-lg-12">
                     <input type="submit" class="btn btn-primary btn-lg btn-block" value="Send Message" style="background-color:#7971ea">
