@@ -15,8 +15,10 @@
           </div>
           <div class="col-md-7">
 
-            <form  name="contact" netlify>
-              
+            <form  name="contact" method="post" netlify-honeypot="bot-field" netlify>
+               
+              <input type="hidden" name="form-name" value="contact" />
+
               <div class="p-3 p-lg-5 border">
                 <div class="form-group row">
                   <div class="col-md-6">
