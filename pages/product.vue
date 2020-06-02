@@ -46,6 +46,7 @@
             :data-item-price="product.price"
             :data-item-image="product.image"
             :data-item-name="product.title"
+            :data-item-url="'http://localhost:3000/admin/#/collections/produt/entries'/product.slug"
            >
          Ajouter a panier
         </button>

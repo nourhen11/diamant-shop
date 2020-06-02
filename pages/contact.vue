@@ -15,7 +15,7 @@
           </div>
           <div class="col-md-7">
 
-            <form  name="contact" method="post" netlify>
+            <form  name="contact" netlify>
               
               <div class="p-3 p-lg-5 border">
                 <div class="form-group row">

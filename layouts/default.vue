@@ -1,6 +1,6 @@
 <template>
   <div class="site-wrap">
-      <div hidden id="snipcart" data-api-key="M2IzMjUzM2EtNzQwYy00MjYxLWFlNWMtMTk0NWFjY2NmOTBjNjM3MjUwOTU2MDgyOTc2NjUx"></div>
+      <div hidden id="snipcart" data-api-key="M2IzMjUzM2EtNzQwYy00MjYxLWFlNWMtMTk0NWFjY2NmOTBjNjM3MjUwOTU2MDgyOTc2NjUx"  data-currency="EUR"></div>
 
       <header class="site-navbar">
         <div class="site-navbar-top">
@@ -23,10 +23,8 @@
               <div class="col-6 col-md-4 order-3 order-md-3 text-right">
                 <div class="site-top-icons">
                   <ul>
-                    <a  @click="login()" class="snipcart-user-profile">
-                      <span class="snipcart-user-email">Login</span>
-                    </a>
-                    <li><a href="#"><span class="icon icon-person"></span></a></li>
+                    <li><a href="" class="snipcart-customer-profile">nbbb</a></li>
+                    <li><a href="#" class="snipcart-customer-signin"><span class="icon icon-person"></span></a></li>
                     <li><a href="#"><span class="icon icon-heart-o"></span></a></li>
                     <li>
                       <a class="site-cart" href="#">
