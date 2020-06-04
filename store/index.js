@@ -1,5 +1,5 @@
 export const state = () => ({
-    blogPosts: [],
+    blogArticle: {},
     products:[],
     product:{}
   });
@@ -13,6 +13,9 @@ export const state = () => ({
     },
     setProduct (state, product) {
       state.product = product
+    },
+    setArticle (state, article) {
+      state.blogArticle = article
     },
   };
   

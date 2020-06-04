@@ -11,12 +11,10 @@ collections:
     format: 'json'
     folder: 'assets/content/blog'
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
-    editor:
-      preview: false
+    identifier_field: title
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'PublishDate', name: 'date', widget: 'datetime' }
+      - { label: 'PublishDate', name: 'date', widget: 'datetime',dateFormat: "DD.MM.YYYY", timeFormat: "HH:mm"  }
       - { label: 'Author', name: 'author', widget: 'string' }
       - { label: 'Image', name: 'image', widget: 'image' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
@@ -26,15 +24,15 @@ collections:
     format: 'json'
     folder: 'assets/content/product'
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
-    editor:
-      preview: false
+    identifier_field: title
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Description', name: 'description', widget: 'markdown' }
+      - {label: "Publish Date", name: "date", widget: "date",format: 'MMM Do YY'}
       - { label: 'Price', name: 'price', widget: 'string' }
-      - { label: 'Color', name: 'color', widget: 'string' }
+      - { label: 'metal', name: 'color',widget: 'select', options: ["OR BLANC", "OR JAUNE", "OR ROSE","PLATINE"] }
       - { label: 'Size', name: 'size', widget: 'string' }
       - { label: 'Image', name: 'image', widget: 'image' }
-      - { label: 'Category',name: 'category', widget: 'select', options: ["BAGUES", "BOUCLES A OREILLES", "BRACELETS","c","BOX SET"]}
+      - { label: 'Quantity', name: 'quantity', widget: 'number' }
+      - { label: 'Category',name: 'category', widget: 'select', options: ["BAGUES", "BOUCLES A OREILLES", "BRACELETS","COLLIERS ET PENDENTIFS"]}
             

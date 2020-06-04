@@ -15,7 +15,8 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'preconnect', href: 'https://app.snipcart.com' },
       { rel: 'preconnect', href: 'https://cdn.snipcart.com' },
-      { rel: 'stylesheet', href: 'https://cdn.snipcart.com/themes/v3.0.13/default/snipcart.css' }
+      { rel: 'stylesheet', href: 'https://cdn.snipcart.com/themes/v3.0.13/default/snipcart.css' },
+      { rel: 'stylesheet', href: '//cdn-images.mailchimp.com/embedcode/classic-10_7.css'}
     ]
   },
   /*

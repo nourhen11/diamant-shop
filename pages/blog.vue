@@ -17,7 +17,7 @@
             <h3><a href="#" class="secondColor">{{article.title}}</a></h3>
             <p class="post-meta mb-4">By <a href="#" class="secondColor">{{article.author}}</a> <span class="block-8-sep">&bullet;</span>{{article.date}}</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam iste dolor accusantium facere corporis ipsum animi deleniti fugiat. Ex, veniam?[...]</p>
-            <p><router-link to="/article" class="btn btn-primary btn-sm" style="background-color:#7971ea">Lire la suite</router-link></p>
+            <p><a href="#" class="btn btn-primary btn-sm" style="background-color:#7971ea" @click="getArticle(article)">Lire la suite</a></p>
           </div>
         </div>
       </div>
@@ -40,6 +40,13 @@ export default {
         return res;
       });
       this.articles=blogList
+  },
+  methods:{
+    getArticle(article){
+      this.$store.commit('setArticle', article)
+      this.$router.push('/article')
+      
+    }
   }
 }
 </script>

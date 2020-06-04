@@ -17,28 +17,11 @@
             <div class="row">
               <div class="col-md-12 mb-5">
 
-                <div class="float-md-left mb-4"><h2 class="text-black h5">TOUT</h2></div>
                 <div class="d-flex">
-                  <div class="dropdown mr-1 ml-md-auto">
-                    <button type="button" class="btn btn-secondary btn-sm dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Latest
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-                      <a class="dropdown-item" href="#">Men</a>
-                      <a class="dropdown-item" href="#">Women</a>
-                      <a class="dropdown-item" href="#">Children</a>
-                    </div>
-                  </div>
+             
                   <div class="btn-group">
-                    <button type="button" class="btn btn-secondary btn-sm dropdown-toggle" id="dropdownMenuReference" data-toggle="dropdown">Reference</button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
-                      <a class="dropdown-item" href="#">Relevance</a>
-                      <a class="dropdown-item" href="#">Name, A to Z</a>
-                      <a class="dropdown-item" href="#">Name, Z to A</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">Price, low to high</a>
-                      <a class="dropdown-item" href="#">Price, high to low</a>
-                    </div>
+                    <button type="button" class="btn text-white btn-sm" style="background-color:#efc9cf">Liste des Produits</button>
+                    
                   </div>
                 </div>
               </div>
@@ -48,12 +31,12 @@
               <!-- -->
               <div class="col-sm-6 col-lg-4 mb-4" v-for="product in products" :key="product.title">
                 <div class="block-4 text-center border">
-                  <figure class="block-4-image" style="height: 182px; cursor:pointer">
-                    <a @click="addproduct(product)"><img :src="product.image" alt="Image placeholder" class="img-fluid"></a>
+                  <figure class="block-4-image" style="height: 135px; cursor:pointer">
+                    <nuxt-link :to="'/product/' + product.title"><img :src="product.image" alt="Image placeholder" class="img-fluid" style="height: 154px;"></nuxt-link>
                   </figure>
                   <div class="block-4-text p-4">
                     <p class="mb-0" style="height: 54px;">{{product.title}}</p>
-                    <p class="font-weight-bold" style="color:#7971ea;">{{product.price}} € </p>
+                    <h5 class="font-weight-bold" style="color:#7971ea;">{{product.price}} € </h5>
                   </div>
                 </div>
               </div>
@@ -113,13 +96,16 @@
               <div class="mb-4">
                 <h3 class="mb-3 h6 text-uppercase text-black d-block">Couleur</h3>
                 <a class="d-flex color-item align-items-center" @click="filterProducts('color','Blanc')" style="cursor:pointer">
-                  <span class=" color d-inline-block rounded-circle mr-2" style="background-color:#f5efef"></span> <span class="text-black">Blanc</span>
+                  <span class=" color d-inline-block rounded-circle mr-2" style="background-color:#f5efef"></span> <span class="text-black">BLANC</span>
                 </a>
                 <a class="d-flex color-item align-items-center"  @click="filterProducts('color','Jaune')"  style="cursor:pointer">
-                  <span class="color d-inline-block rounded-circle mr-2" style="background-color:#e8e83f"></span> <span class="text-black">Jaune</span>
+                  <span class="color d-inline-block rounded-circle mr-2" style="background-color:#e8e83f"></span> <span class="text-black">JAUNE</span>
                 </a>
                 <a  class="d-flex color-item align-items-center" style="cursor:pointer" @click="filterProducts('color','Rose')" >
-                  <span class="color d-inline-block rounded-circle mr-2" style="background-color:#f7ccd4"></span> <span class="text-black">Rosé</span>
+                  <span class="color d-inline-block rounded-circle mr-2" style="background-color:#f7ccd4"></span> <span class="text-black">OR ROSE</span>
+                </a>
+                <a  class="d-flex color-item align-items-center" style="cursor:pointer" @click="filterProducts('color','Rose')" >
+                  <span class="color d-inline-block rounded-circle mr-2" style="background-color:#d1d3d6"></span> <span class="text-black">PLATINE</span>
                 </a>
                 
               </div>
@@ -142,6 +128,9 @@ computed: {
     return this.$store.state.products
   }
 
+},
+created(){
+  console.log(this.$route.path)
 },
  methods: {
     addproduct(item) {
