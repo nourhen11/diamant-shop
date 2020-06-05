@@ -25,7 +25,7 @@
                   <ul>
                    
                 
-                    <li><a href="#"><span class="icon icon-person"></span></a></li>
+                    <li><a href=""><span class="icon icon-person snipcart-customer-signin"></span></a></li>
                     <li><a href="#"><span class="icon icon-heart-o"></span></a></li>
                     <li>
                       <a class="site-cart" href="#">

@@ -70,7 +70,7 @@
               <ul class="list-unstyled mb-0">
                 <li class="mb-1" ><a @click="filterProducts('category','BAGUES')" class="d-flex colorp" style="cursor:pointer"><span>BAGUES</span></a></li>
                 <li class="mb-1"><a  @click="filterProducts('category','BRACELETS')" class="d-flex colorp" style="cursor:pointer"><span>BRACELETS</span></a></li>
-                <li class="mb-1"><a @click="filterProducts('category','COLLIERS')" class="d-flex colorp" style="cursor:pointer"><span>COLLIERS</span></a></li>
+                <li class="mb-1"><a @click="filterProducts('category','COLLIERS ET PENDENTIFS')" class="d-flex colorp" style="cursor:pointer"><span>COLLIERS</span></a></li>
                 <li class="mb-1"><a  @click="filterProducts('category','BOUCLES A OREILLES')" class="d-flex colorp " style="cursor:pointer"><span>BOUCLES OREILLES</span> </a></li>
 
               </ul>
@@ -142,7 +142,7 @@ import 'vue-range-slider/dist/vue-range-slider.css'
 export default {
 data(){
   return{
-      sliderValue: 500,
+      sliderValue: 100,
       products:[]
   }
 },
