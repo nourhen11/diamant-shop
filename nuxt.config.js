@@ -38,6 +38,9 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+   {src: '~/plugins/vue-carousel',ssr:false},
+   {src: '~/plugins/vue-mark-display', ssr: false }
+
   ],
   /*
   ** Nuxt.js dev-modules

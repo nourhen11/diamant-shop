@@ -16,14 +16,16 @@
 
               <div class="col-12 mb-3 mb-md-0 col-md-4 order-1 order-md-2 text-center">
                 <div class="site-logo">
-                  <a href="index.html" class="js-logo-clone">Histoire d'or</a>
+                  <a href="index.html" class="js-logo-clone">DIAMANT <img src="images/5.jpg" style="width: 22px;"> SHOP</a>
                 </div>
               </div>
 
               <div class="col-6 col-md-4 order-3 order-md-3 text-right">
                 <div class="site-top-icons">
                   <ul>
-                    <li><a href="#" class="snipcart-customer-signin"><span class="icon icon-person"></span></a></li>
+                   
+                
+                    <li><a href="#"><span class="icon icon-person"></span></a></li>
                     <li><a href="#"><span class="icon icon-heart-o"></span></a></li>
                     <li>
                       <a class="site-cart" href="#">
@@ -90,9 +92,9 @@
               <div class="block-5 mb-5">
                 <h3 class="footer-heading mb-4">Contact Info</h3>
                 <ul class="list-unstyled">
-                  <li class="address"> 39 RUE DU ANATOLE 75012 PARIS</li>
-                  <li class="phone"><a href="tel://23923929210">+2 392 3929 210</a></li>
-                  <li class="email">emailaddress@domain.com</li>
+                  <li class="address"> 39 RUE DU LIBERTE PARIS</li>
+                  <li class="phone"><a href="tel://23923929210">+336 56 67 88</a></li>
+                  <li class="email">dianmantshop@gmail.com</li>
                 </ul>
               </div>
 
@@ -134,11 +136,15 @@
 
 <script>
 export default {
-  methods:{
-    login(){
-      this.$auth.loginWith('auth0')
-
+  data(){
+    return{
+      user:{}
     }
+  },
+  created(){
+  },
+  methods:{
+
   }
 }
 </script>

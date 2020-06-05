@@ -11,13 +11,13 @@
         <!---->
         <div class="row align-items-center" v-for="article in articles" :key="article.title">
           <div class="col-md-12 col-lg-7 mb-5">
-            <a href="#"><img :src="article.image" alt="Image placeholder" class="img-fluid rounded"></a>
+            <a href="#"><img :src="'./'+article.image" alt="Image placeholder" class="img-fluid rounded"></a>
           </div>
           <div class=" col-lg-5">
             <h3><a href="#" class="secondColor">{{article.title}}</a></h3>
             <p class="post-meta mb-4">By <a href="#" class="secondColor">{{article.author}}</a> <span class="block-8-sep">&bullet;</span>{{article.date}}</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam iste dolor accusantium facere corporis ipsum animi deleniti fugiat. Ex, veniam?[...]</p>
-            <p><a href="#" class="btn btn-primary btn-sm" style="background-color:#7971ea" @click="getArticle(article)">Lire la suite</a></p>
+            <p> <nuxt-link :to="'/article/' + article.date" class="btn btn-primary btn-sm" style="background-color:#7971ea">Lire la suite</nuxt-link></p>
           </div>
         </div>
       </div>
@@ -42,11 +42,7 @@ export default {
       this.articles=blogList
   },
   methods:{
-    getArticle(article){
-      this.$store.commit('setArticle', article)
-      this.$router.push('/article')
-      
-    }
+
   }
 }
 </script>
