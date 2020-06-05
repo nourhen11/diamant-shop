@@ -57,15 +57,7 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/auth'
   ],
-  auth: {
-    strategies: {
-      auth0: {
-        domain: 'dev-n7864z3o.auth0.com',
-        client_id: '6TcbqfOSiyzsY5mMht940rW36Z9hU05V',
-        audience: 'https://dev-n7864z3o.auth0.com/api/v2/'
-      }
-    }
-  },
+
   /*
   ** Build configuration
   */
