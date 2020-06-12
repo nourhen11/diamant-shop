@@ -3,7 +3,7 @@
 > My incredible Nuxt.js project
 
 ## Build Setup
-
+https://diamantshop.netlify.app
 ```bash
 # install dependencies
 $ npm install
